@@ -16,3 +16,40 @@ section {
     max-width: 960px;
     padding: 2rem;
 }
+.accordion-item {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.collapsed {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.expanded {
+    max-height: unset;
+    visibility: visible;
+    opacity: 1;
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--indigo);
+    color: white;
+    border: none;
+    align-items: center;
+    padding: .5rem 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+svg {
+    width: 1.5rem;
+}
+
+.accordion-content.expanded {
+    padding: 1rem;
+}
