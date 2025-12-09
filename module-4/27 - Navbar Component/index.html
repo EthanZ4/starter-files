@@ -13,21 +13,89 @@
     <title>27 - Navbar Component</title>
 
     <!-- Bootstrap CSS -->
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="text-center min-vh-100 d-flex flex-column justify-content-between">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <img src="img/paw-outline.svg" alt="" width="30">
+            Dog Days Cabins
+          </a>
 
-    <h1>These are the dog days.</h1>
-    <p>The dog days of summer are known to be the hottest and most uncomfortable part of the year – but they don’t have to be.</p>
-    <p>Get away from it all by booking one of our luxury cabin packages today. Cool off under the cover of ancient boreal forests while taking in the majestic views of the Rocky Mountains and its glacial-fed rivers.</p>
-    <a href="#">Book Now</a>
+          <button class="navbar-toggler" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false" 
+            aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <p>This website was created for academic purposes only.</p>
-    <p>&copy;
-      <script>document.write(new Date().getFullYear())</script>
-    </p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a href="" 
+                  class="nav-link dropdown-toggle" 
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >
+                  Book Now</a>
+
+                  <ul class="dropdown-menu">
+                    <li><a href="" class="dropdown-item">Banff</a></li>
+                    <li><a href="" class="dropdown-item">Jasper</a></li>
+                    <li><a href="" class="dropdown-item">Lake Louise</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a href="" class="dropdown-item">View All</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Our Packages</a>
+              </li>
+            </ul>
+
+            <div class="d-flex justify-content-center gap-3 align-items-end align-items-lg-center">
+              <!-- search -->
+              <form action="#" role="search" class="d-flex gap-2">
+                <label for="search" class="sr-only invisible">Search</label>
+                <input type="search" class="form-control" placeholder="Search" name="search" id="search" aria-label="Search">
+                <button type="submit" class="btn btn-outline-warning">Search</button>
+              </form>
+              <!-- dark mode -->
+              <form action="#" class="form-check form-switch d-flex gap-2">
+                <input type="checkbox" class="form-check-input bg-warning" id="darkModeSwitch" checked>
+                <label for="darkModeSwitch" class="form-check-label text-white-50">Dark Mode</label>
+              </form>
+            </div>
+
+          </div> <!-- end of navbar collapse -->
+        </div>
+      </nav>
+        
+    </header>
+    <main class="container">
+      <section class="row justify-content-center">
+        <div class="col-md-10 col-lg-9 col-xxl-7">
+          <h1 class="display-3 mb-4">These are the dog days.</h1>
+          <p class="lead">The dog days of summer are known to be the hottest and most uncomfortable part of the year – but they don’t have to be.</p>
+          <p>Get away from it all by booking one of our luxury cabin packages today. Cool off under the cover of ancient boreal forests while taking in the majestic views of the Rocky Mountains and its glacial-fed rivers.</p>
+          <a href="#" class="btn btn-warning btn-lg mt-4">Book Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This website was created for academic purposes only.</p>
+      <p>&copy;
+        <script>document.write(new Date().getFullYear())</script>
+      </p>
+    </footer>
 
   </body>
 
